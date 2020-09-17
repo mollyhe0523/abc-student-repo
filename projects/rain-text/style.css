@@ -1,0 +1,4 @@
+/* To let the magic happen, span should be relative to each other */
+span{
+  position: relative;
+}
