@@ -8,6 +8,14 @@ for (var i=0;i<cat.length;i++){
   });
 }
 
+let cat4=document.getElementById("cat4");
+cat4.addEventListener("mouseover",()=>{
+  document.getElementById("preview").src="img/mini1.png"
+})
+cat4.addEventListener("mouseout",()=>{
+  document.getElementById("preview").src="img/project-preview.jpeg"
+})
+
 
 let man=document.getElementById("man");
 man.addEventListener("mouseover",()=>{
