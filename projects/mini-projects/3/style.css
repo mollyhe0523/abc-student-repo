@@ -1,9 +1,13 @@
 img{
-  height:80%;
+  height:90%;
   z-index: -1;
   bottom:0px;
   position: absolute;
 }
+ /* p{
+  margin:0;
+  text-align: center;
+}  */
 #wheat2{
   left:10%;
 }
