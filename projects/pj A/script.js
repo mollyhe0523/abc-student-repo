@@ -90,7 +90,7 @@ function speakText(){
     clearDiv("div3");
     appear("div4");
     speakP4();
-  },1000);
+  },2000);
 }
 
 let inputName2 = document.getElementById("inputName2");
