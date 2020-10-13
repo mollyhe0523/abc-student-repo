@@ -90,7 +90,7 @@ function speakText(){
     clearDiv("div3");
     appear("div4");
     speakP4();
-  },2000);
+  },11000);
 }
 
 let inputName2 = document.getElementById("inputName2");
@@ -109,7 +109,7 @@ function search(){
       console.log(response);
       let id = response.data.items[0].id.videoId;
       console.log(id);
-      video.src="http://www.youtube.com/embed/"+id;
+      video.src="https://www.youtube.com/embed/"+id;
     })
     .catch(function (error) {
       // handle error
