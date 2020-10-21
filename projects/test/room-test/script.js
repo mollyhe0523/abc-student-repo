@@ -8,13 +8,6 @@ for(let i=0;i<20;i++){
   container.appendChild(newDiv);
 
 }
-// array.forEach((item)=>{
-  // console.log(item);
-  // let newDiv=document.createElement("div");
-  // newDiv.className="box";
-  // newDiv.innerHTML = item.index;
-  // container.appendChild(newDiv);
-// })
 
 let boxes = container.getElementsByClassName("box");
 
@@ -26,7 +19,10 @@ button.addEventListener("click", ()=>{
   container.prepend(lastBox)
 })
 
-// setInterval(){
-//
-//
-// }
+// array.forEach((item)=>{
+  // console.log(item);
+  // let newDiv=document.createElement("div");
+  // newDiv.className="box";
+  // newDiv.innerHTML = item.index;
+  // container.appendChild(newDiv);
+// })
