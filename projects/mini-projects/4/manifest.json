@@ -13,7 +13,7 @@
     }
   ],
   "browser_action":{
-    "default_icon": "tent2.png",
+    "default_icon": "tent3.png",
     "default_popup": "popup/popup.html"
   }
 }
