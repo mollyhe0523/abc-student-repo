@@ -8,7 +8,8 @@ function replace(word1,word2){
 
 function gotMessage(request,sender,sendResponse){
   console.log(request);
-  replace(message.word1,message.word2);
+  // replace(message.word1,message.word2);
+  replace("moon","potato");
 
 }
 chrome.runtime.onMessage.addListener(gotMessage);

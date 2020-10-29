@@ -11,7 +11,6 @@ chrome.runtime.sendMessage({type:"getCurrentValue"}, function(response){
 });
 
 
-
 button.addEventListener("click",()=>{
   currentValue++;
   valueDisplay.innerHTML=currentValue;
