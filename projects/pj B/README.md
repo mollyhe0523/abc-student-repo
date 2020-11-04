@@ -1,11 +1,9 @@
 # Greedy Snake
+![Pj Preview](https://github.com/mollyhe0523/abc-student-repo/raw/master/projects/pj%20B/snake_gif.gif)
 
 ## Introduction
 
-![Pj Preview](https://github.com/mollyhe0523/abc-student-repo/tree/master/projects/pj%20A/preview.gif "Preview")
-
 Have you ever imagined a greedy snake game that eat HTML element on the webpage as its food? This game here allows you to control the greedy snake and swallow as many words/ images as you can!
-
 
 
 ### How it works:
@@ -24,7 +22,7 @@ Have you ever imagined a greedy snake game that eat HTML element on the webpage 
 
 ### Prototype
 
-[prototype](https://github.com/mollyhe0523/abc-student-repo/tree/master/projects/pj%20B/prototype)
+[link to prototype](https://github.com/mollyhe0523/abc-student-repo/tree/master/projects/pj%20B/prototype)
 
 ### Task Breakdown
 
@@ -32,11 +30,37 @@ Molly:
 
 - Task 1: to build the greedy snake.
 
-  Solution: [missing solution]
+  Solution: [p5.js snake game](https://p5js.org/examples/interaction-snake-game.html) & switch it to instance mode
 
-- Task 2: to find the position of the snake head.
+  To instantiate a p5 canvas, you only need to make the p5 script into a function, pass in "sketch" when setting the function and put "sketch" before each p5 based function.
+  ```javascript
+  var s= function(sketch){
+    sketch.setup=function(){
+      let c=sketch.createCanvas(sketch.windowWidth,sketch.windowHeight);
+      c.position(scrollLeft,scrollTop);
 
-  Solution: [missing solution]
+      }
+    sketch.draw=function(){
+      ...
+      }
+  }
+  ```
+
+  Lastly, call this to launch p5.
+  ```javascript
+  let myp5 = new p5(s);
+  ```
+<br>
+- Task 2: to prevent selecting the food that is empty -- its location (0,0). Or is hidden.
+
+  Solution:
+  ```javascript
+  while ((fruit.getBoundingClientRect().left==0) && (fruit.getBoundingClientRect().top==0) || (fruit.style.visibility == "hidden") || (fruit.style.display == "none") || (fruit.style.opacity == "0")){
+    fruitIndex=Math.floor(Math.random()*total_list.length);
+    fruit = total_list[fruitIndex];
+  }
+  ```
+
 
 Yuhang:
 
@@ -65,40 +89,51 @@ Yuhang:
     });
   });
   ```
-
+<br>
 - Task 2: to build a collision detection function.
 
-Solution:
-```javascript  
-// x, y --> coordinates of snake head, r --> radius
-if ( ( ( y - r < fruit.getBoundingClientRect().top ) && ( y - r > fruit.getBoundingClientRect().bottom) || ( y + r < fruit.getBoundingClientRect().bottom) && ( y + r > fruit.getBoundingClientRect().top) ) && ( (x - r >fruit.getBoundingClientRect().left) && (x - r < fruit.getBoundingClientRect().right) ||      (x+r <fruit.getBoundingClientRect().right) && (x+r > fruit.getBoundingClientRect().left) ) ) {
-  fruit.style.visibility = "hidden";
-```
+  Solution:
+  ```javascript  
+  // x, y --> coordinates of snake head, r --> radius
+  if ( ( ( y - r < fruit.getBoundingClientRect().top ) && ( y - r > fruit.getBoundingClientRect().bottom) || ( y + r < fruit.getBoundingClientRect().bottom) && ( y + r > fruit.getBoundingClientRect().top) ) && ( (x - r >fruit.getBoundingClientRect().left) && (x - r < fruit.getBoundingClientRect().right) ||      (x+r <fruit.getBoundingClientRect().right) && (x+r > fruit.getBoundingClientRect().left) ) ) {
+    fruit.style.visibility = "hidden";
+  ```
 
 ### Furthur development
 
 - Problem 1: the original way to find words list would break the link and change the style.
 
-Solution: borrow Leon's in-class code, advanced replacer extension, involving regular expression. (cr: James Padolsey, "findAndReplaceDOMText v 0.4.6")
+  Solution: borrow Leon's in-class code, advanced replacer extension, involving regular expression. (cr: James Padolsey, [findAndReplaceDOMText](https://github.com/padolsey/findAndReplaceDOMText)
+
+  Now it only selects the word on the page.
+  ```javascript  
+  findAndReplaceDOMText(document.body, {
+    find: /(\w[+#]+|\w+)/g,
+    wrap: "span",
+    wrapClass: "myWords"
+  })
+  ```
+
 
 - Problem 2: To initiate the snake using popup window seems annoying.
 
-Solution: taking Leon's suggestion, detect keypress "snake" to initiate it.
+  Solution: taking Leon's suggestion, detect keypress "snake" to initiate it.
 
-```javascript  
-let buffer = "";
+  ```javascript  
+  let buffer = "";
 
-document.addEventListener('keypress', logKey);
+  document.addEventListener('keypress', logKey);
 
-function logKey(e) {
-  console.log( "input: " + e.key );
-  buffer += e.key;
-  if ( buffer.slice(-5) == "snake") {
-    console.log("snake activated");
-    go();
-    let myp5 = new p5(s);
+  function logKey(e) {
+    console.log( "input: " + e.key );
+    buffer += e.key;
+    if ( buffer.slice(-5) == "snake") {
+      console.log("snake activated");
+      go();
+      let myp5 = new p5(s);
+    }
   }
-}
-```
+  ```
+<br>
 
 Shoutout to Leon and Richard for giving help throughout the making of this project.
