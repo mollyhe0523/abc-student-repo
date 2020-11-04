@@ -1,5 +1,6 @@
 # Greedy Snake
 ![Pj Preview](https://github.com/mollyhe0523/abc-student-repo/raw/master/projects/pj%20B/snake_gif.gif)
+[Download here]()
 
 ## Introduction
 
@@ -50,7 +51,7 @@ Molly:
   ```javascript
   let myp5 = new p5(s);
   ```
-<br>
+
 - Task 2: to prevent selecting the food that is empty -- its location (0,0). Or is hidden.
 
   Solution:
@@ -89,7 +90,7 @@ Yuhang:
     });
   });
   ```
-<br>
+
 - Task 2: to build a collision detection function.
 
   Solution:
