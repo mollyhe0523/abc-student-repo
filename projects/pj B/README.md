@@ -1,6 +1,6 @@
 # Greedy Snake
 ![Pj Preview](https://github.com/mollyhe0523/abc-student-repo/raw/master/projects/pj%20B/snake_gif.gif)
-[Download here]()
+[Download here](https://github.com/mollyhe0523/abc-student-repo/blob/master/projects/pj%20B/greedy_snake.zip)
 
 ## Introduction
 
