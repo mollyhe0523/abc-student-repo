@@ -1,5 +1,5 @@
 # A lonely, lonely website
-![Pj Preview](https://github.com/mollyhe0523/abc-student-repo/tree/master/projects/pj%20A/preview.gif "Preview")
+![Pj Preview](https://github.com/mollyhe0523/abc-student-repo/raw/master/projects/pj%20A/preview.gif)
 
 ## Description
 This project aims to inquire into the mindset of a website as a conscious being: What would it do? What is its capability and distinctiveness?
