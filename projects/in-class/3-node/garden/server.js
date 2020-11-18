@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
-const port = 3010
+// const port = 3010
 const secret = "paperclip";
-// const port = process.env.PORT
+const port = process.env.PORT
 let gifts = [];
 
 app.use(express.static('public'))
