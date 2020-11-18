@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const secret = "rock";
-const port = 3200;
+const port = process.env.PORT
 let gifts = [];
 
 app.use(express.static('public'))
