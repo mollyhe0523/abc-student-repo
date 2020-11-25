@@ -35,7 +35,6 @@ socket.on("incoming",(data)=>{
   chatbox.appendChild(li);
 
   //check
-  //html{scroll-behavior:smooth}
   chatbox.scrollTop = chatbox.scrollHeight;
 })
 
