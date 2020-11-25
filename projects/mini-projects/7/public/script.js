@@ -25,6 +25,6 @@ socket.on("full",()=>{
 
 function yo(){
   full.innerHTML = "All crew aboard. Let's fly!<br>(Turn up the audio to hear the launch!)"
-  img.style.backgroundImage="url(sky.gif)";
+  img.style.backgroundImage="url(sky2.gif)";
   audio.play();
 }
