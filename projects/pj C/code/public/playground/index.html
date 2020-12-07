@@ -1,46 +1,30 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
   <head>
-    <title>NoteUniverse</title>
+    <meta charset="utf-8">
+    <title>Playground</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
+
   <body>
-    <div id="wrapper">
 
-      <div id="bgWrapper">
-        <img id="bg" src="img/grass1.jpg" alt="">
-        <button type="button" id="rollButton">Add new paper</button> <br>
+    <div id="note-container">
+      <div id="paper">
 
       </div>
 
-      <div id="notesgroundWrapper">
-        <!-- <img id="p1" class="folded" src="img/folded.png" alt=""> -->
-      </div>
+      <div id="config-container">
 
-
-      <div id="writingPage">
-        <!-- <input type="text" id="message" autocomplete="off" placeholder="input text here"> -->
-
-        <div id="paperWrapper">
-          <div id="content">
-
-            <!-- <div class="textDiv" style="left:60vw">
-              <p>ofjsdof</p>
-            </div>
-            <div class="textDiv">
-              <p>ofjsdof</p>
-            </div> -->
-          </div>
-          <img id="crumbled" src="img/crumbled.jpg" alt="">
-        </div>
         <div id="configWrapper">
           <button type="button" id="closeButton">X</button>
-
+          <label style="font-family: Arial" for="config-color">Color:</label>
           <div class="config" id="config-color">
-            <label style="font-family: Arial" for="input-color">Color:</label>
             <input type="color" id="input-color" value="#000000">
           </div>
+
+          <button type="button" id="btnB" style="background-color:white"><b>B</b></button>
+          <button type="button" id="btnI" style="background-color:white"><i>I</i></button>
+          <button type="button" id="btnU" style="background-color:white"><u>U</u></button>
 
           <div class="config" id="config-font">
             <label style="font-family: Arial" for="select-font">Font:</label>
@@ -60,17 +44,16 @@
           </div>
           <div class="config" id="config-size">
             <label style="font-family: Arial" for="input-size">Font Size:</label>
-            <input type="range" id="input-size" value="18" min="12" max="80">
+            <input type="range" id="input-size" value="12" min="3" max="48">
           </div>
 
           <button type="button" id="sendButton">Send</button>
 
         </div>
-      </div>
+
     </div>
 
-
-    <script src="/socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js" charset="utf-8"></script>
   </body>
+
 </html>
