@@ -1,33 +1,36 @@
-#preview{
-  width: 50%;
-  opacity: 0;
+h2{
+  text-align: center;
+  color:white;
+  margin:0
 }
-.preview-wrap{
-  left:35%;
-  top:10%;
-  position: absolute;
+.box{
+  width:150px;
+  height:150px;
+  /* border: 2px solid white; */
 }
-
-p{
-text-align: center;
-font-family: 'Ranchers', cursive;
-color:rgba(0, 0, 0, 0.5);
+.pikachu{
+  margin-top: 50px;
+  width:150px;
 }
-#cat7 {
-transform: scaleX(-1)
+#girl{
+  margin-left: 20px;
+  width:150px;
 }
-#cat9 {
-transform: scaleX(-1);
-}
-#cat10 {
-transform: scaleX(-1)
-}
-#arrow{
-margin-top: 50px;
-}
-.cat-container{
+#container{
+  width:100%;
+  /* justify-content: center; */
   display: flex;
-  flex-wrap: wrap;
-  position: absolute;
-  bottom:0px;
+  flex-wrap:wrap;
+  /* flex-direction: row; */
+}
+body{
+  margin: 0;
+  background-color: black;
+}
+p{
+  font-size: 20px;
+  text-align: center;
+}
+#text{
+  margin-top: 40px;
 }

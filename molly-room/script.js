@@ -1,69 +1,154 @@
-let cat = document.getElementsByClassName("cat");
-for (var i=0;i<cat.length;i++){
-  cat[i].addEventListener("mouseover",()=>{
-    document.getElementById("preview").style.opacity="1";
-  });
-  cat[i].addEventListener("mouseout",()=>{
-    document.getElementById("preview").style.opacity="0";
-  });
+// let array=[];
+let container=document.getElementById('container');
+let boxes = container.getElementsByClassName("box");
+let stop = document.getElementById('stop');
+setBoxes();
+
+window.addEventListener("resize", setBoxes);
+function setBoxes(){
+  setTimeout(()=>{
+    let elements = document.getElementsByClassName("newBox");
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+        // console.log("delete")
+    }
+    xNum = Math.ceil(window.innerWidth/150)-1;
+    yNum = Math.ceil(window.innerHeight/150)-1;
+    // console.log(xNum,yNum);
+    boxNum = xNum * yNum - 11;
+    for(let i=0;i<boxNum;i++){
+      let newDiv=document.createElement("div");
+      newDiv.className="newBox box";
+      container.appendChild(newDiv);
+    }
+
+    boxes = container.getElementsByClassName("box");
+  },100);
+
 }
+let state = "go";
 
-let cat4=document.getElementById("cat4");
-cat4.addEventListener("mouseover",()=>{
-  document.getElementById("preview").src="img/mini1.png"
-})
-cat4.addEventListener("mouseout",()=>{
-  document.getElementById("preview").src="img/project-preview.jpeg"
-})
+let run = setInterval(()=>{
+  let lastBox = boxes[boxes.length-1];
+  container.removeChild(lastBox);
+  container.prepend(lastBox)
+},400);
 
-
-let man=document.getElementById("man");
-man.addEventListener("mouseover",()=>{
-  document.getElementById("preview").src="img/mypage.png"
-})
-man.addEventListener("mouseout",()=>{
-  document.getElementById("preview").src="img/project-preview.jpeg"
+stop.addEventListener('click',()=>{
+  if (state == "go"){
+    clearInterval(run);
+    state = "stop";
+    console.log("stop")
+  }
 })
 
+go.addEventListener('click',()=>{
+  if (state == "stop"){
+    run = setInterval(()=>{
+      let lastBox = boxes[boxes.length-1];
+      container.removeChild(lastBox);
+      container.prepend(lastBox)
+    },400);
+    state = "go"
+    console.log("go")
+  }
+})
 
-// The following are some attempts to make the cats and man move
-// but unfortunately failed.
+let pjA=document.getElementById("pjA");
+pjA.addEventListener("mouseover",()=>{
+  pjA.src="img/pjA.gif"
+  pjA.style.marginTop="70px"
+})
+pjA.addEventListener("mouseout",()=>{
+  pjA.src="img/trans2.gif"
+  pjA.style.marginTop="50px"
 
+})
 
-// for (i=0;i<11;i++){
-//   let addAmount=i*120;
-//   let windowWidth=screen.width;
-//   if(addAmount>windowWidth){
-//      let top=Math.floor(addAmount/windowWidth)*100
-//      let left= addAmount%windowWidth
-//      document.getElementById("div"+(i+1)).style.left=left+"px";
-//      document.getElementById("div"+(i+1)).style.top=top+"px";
-//
-//   }else{
-//     document.getElementById("div"+(i+1)).style.left=addAmount+"px";
-//
-//   }
-//   }
+let pjB=document.getElementById("pjB");
+pjB.addEventListener("mouseover",()=>{
+  pjB.src="img/pjB.gif"
+  pjB.style.marginTop="70px"
+})
+pjB.addEventListener("mouseout",()=>{
+  pjB.src="img/trans2.gif"
+  pjB.style.marginTop="50px"
+})
 
+let pjC=document.getElementById("pjC");
+pjC.addEventListener("mouseover",()=>{
+  pjC.src="img/pjC.gif"
+  pjC.style.marginTop="60px"
+})
+pjC.addEventListener("mouseout",()=>{
+  pjC.src="img/trans2.gif"
+  pjC.style.marginTop="50px"
+})
 
-// elem.addEventListener("mouseover",myMove)
-// // elem.addEventListener("mouseout",stop)
-//
-// function myMove() {
-//   let id = setInterval(frame, 10);
-//   let pos = 0;
-//   function frame() {
-//       if (pos == 350) {
-//         clearInterval(id);
-//       } else {
-//         pos+=10;
-//         console.log(pos)
-//         // elem.style.top = pos + 'px';
-//         elem.style.left = pos + 'px';
-//       }
-//     }
-//   }
-// function stop(){
-//   console.log("stop")
-//
-// }
+let mini1=document.getElementById("mini1");
+mini1.addEventListener("mouseover",()=>{
+  mini1.src="img/mini1.webp"
+})
+mini1.addEventListener("mouseout",()=>{
+  mini1.src="img/trans2.gif"
+})
+
+let mini2=document.getElementById("mini2");
+mini2.addEventListener("mouseover",()=>{
+  mini2.src="img/mini2.jpg"
+})
+mini2.addEventListener("mouseout",()=>{
+  mini2.src="img/trans2.gif"
+})
+
+let mini3=document.getElementById("mini3");
+mini3.addEventListener("mouseover",()=>{
+  mini3.src="img/mini3.jpg"
+})
+mini3.addEventListener("mouseout",()=>{
+  mini3.src="img/trans2.gif"
+})
+
+let mini4=document.getElementById("mini4");
+mini4.addEventListener("mouseover",()=>{
+  mini4.src="img/mini4.jpg"
+})
+mini4.addEventListener("mouseout",()=>{
+  mini4.src="img/trans2.gif"
+})
+
+let mini5=document.getElementById("mini5");
+mini5.addEventListener("mouseover",()=>{
+  mini5.src="img/mini5.jpg"
+})
+mini5.addEventListener("mouseout",()=>{
+  mini5.src="img/trans2.gif"
+})
+
+let mini6=document.getElementById("mini6");
+mini6.addEventListener("mouseover",()=>{
+  mini6.src="img/mini6.jpg"
+})
+mini6.addEventListener("mouseout",()=>{
+  mini6.src="img/trans2.gif"
+})
+
+let mini7=document.getElementById("mini7");
+mini7.addEventListener("mouseover",()=>{
+  mini7.src="img/mini7.jpg"
+})
+mini7.addEventListener("mouseout",()=>{
+  mini7.src="img/trans2.gif"
+})
+
+let girlBox=document.getElementById("girlBox");
+let girl=document.getElementById("girl");
+let text=document.getElementById("text");
+girlBox.addEventListener("mouseover",()=>{
+  girl.src=""
+  text.innerHTML = "Wanna know about me?"
+})
+girlBox.addEventListener("mouseout",()=>{
+  girl.src="img/1.gif"
+  text.innerHTML = ""
+})

@@ -13,7 +13,7 @@ for (let j=0; j<myList.length; j++){
 let shiny=document.getElementsByClassName('shiny');
 for (let i=0; i<shiny.length; i++){
   shiny[i].style.color="red";
-  shiny[i].style.fontSize+="30px";
+  shiny[i].style.fontSize+="80px";
   console.log("going");
 }
 }
