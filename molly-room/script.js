@@ -8,9 +8,11 @@ window.addEventListener("resize", setBoxes);
 function setBoxes(){
   setTimeout(()=>{
     let elements = document.getElementsByClassName("newBox");
-    while(elements.length > 0){
-        elements[0].parentNode.removeChild(elements[0]);
-        // console.log("delete")
+    if (elements){
+      while(elements.length > 0){
+          elements[0].parentNode.removeChild(elements[0]);
+          // console.log("delete")
+      }
     }
     xNum = Math.ceil(window.innerWidth/150)-1;
     yNum = Math.ceil(window.innerHeight/150)-1;
