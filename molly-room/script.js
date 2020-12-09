@@ -58,7 +58,7 @@ go.addEventListener('click',()=>{
 
 let pjA=document.getElementById("pjA");
 pjA.addEventListener("mouseover",()=>{
-  pjA.src="img/pjA.gif"
+  pjA.src="img/pjA.jpg"
   pjA.style.marginTop="70px"
 })
 pjA.addEventListener("mouseout",()=>{
@@ -69,17 +69,17 @@ pjA.addEventListener("mouseout",()=>{
 
 let pjB=document.getElementById("pjB");
 pjB.addEventListener("mouseover",()=>{
-  pjB.src="img/pjB.gif"
-  pjB.style.marginTop="70px"
+  pjB.src="img/pjB.jpg"
+  // pjB.style.marginTop="70px"
 })
 pjB.addEventListener("mouseout",()=>{
   pjB.src="img/trans2.gif"
-  pjB.style.marginTop="50px"
+  // pjB.style.marginTop="50px"
 })
 
 let pjC=document.getElementById("pjC");
 pjC.addEventListener("mouseover",()=>{
-  pjC.src="img/pjC.gif"
+  pjC.src="img/pjC.jpg"
   pjC.style.marginTop="60px"
 })
 pjC.addEventListener("mouseout",()=>{
