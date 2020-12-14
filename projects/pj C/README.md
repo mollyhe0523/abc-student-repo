@@ -1,5 +1,9 @@
-# [Notes Land](http://notes-land.glitch.me/)
+# Notes Land
+To enter the notes land, click [here](http://notes-land.glitch.me/).
 
+## Introduction
+
+Explore and pass on the little notes. Enjoy!
 
 |![Pj Preview](https://github.com/mollyhe0523/abc-student-repo/raw/master/projects/pj%20C/demo1.gif)|
 |:--:|
@@ -11,20 +15,22 @@
 
 (concepts and features, to be implemented)
 
+Concept: The notes land is designed to be a trial on anonymity. The inspiration comes from the experience of sneakily passing on little notes in class in one's teenager years. This experience is brought to a broader realm with paper thrown on grass.
 
-
-## Introduction
-
-Have you ever imagined a greedy snake game that eat HTML element on the webpage as its food? This game here allows you to control the greedy snake and swallow as many words/ images as you can!
-
-
-## Technical Explanation
-
-![Technical Diagram](https://github.com/mollyhe0523/abc-student-repo/raw/master/projects/pj%20C/technical.jpeg)
 
 ### Prototype
 
 [link to prototype](https://github.com/mollyhe0523/abc-student-repo/blob/master/projects/pj%20C/Project%20C%20Prototype.pdf)
+
+## Technical Explanation
+
+![Technical Diagram 1](https://github.com/mollyhe0523/abc-student-repo/raw/master/projects/pj%20C/technical.jpeg)
+
+
+
+![Technical Diagram 2](https://github.com/mollyhe0523/abc-student-repo/raw/master/projects/pj%20C/technical2.jpeg)
+
+
 
 ### Process
 
@@ -34,7 +40,7 @@ _(Insert images HERE)_
 
 - express.js
 - socket.io
-- Firebase
+- Firebase realtime database
 
 ### Challenges & Solutions
 
