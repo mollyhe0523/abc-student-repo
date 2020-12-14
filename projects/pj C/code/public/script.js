@@ -113,9 +113,17 @@ function closeDragElement() {
 }
 
 
-
+let addState = true
 rollButton.addEventListener("click",()=>{
-  socket.emit("new-paper");
+  if (addState){
+    socket.emit("new-paper");
+    addState = false
+    rollButton.innerHTML = "Plz wait for a while~"
+    setTimeout(()=>{
+      addState = true
+      rollButton.innerHTML = "Add new paper"
+    },5000)
+  }
 })
 
 socket.on("new-paper-to-all",(count)=>{
