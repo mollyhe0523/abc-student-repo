@@ -1,10 +1,11 @@
 # Greedy Snake
 ![Pj Preview](https://github.com/mollyhe0523/abc-student-repo/raw/master/projects/pj%20B/snake_gif.gif)
+
 [Download here](https://github.com/mollyhe0523/abc-student-repo/blob/master/projects/pj%20B/greedy_snake.zip)
 
 ## Introduction
 
-Have you ever imagined a greedy snake game that eat HTML element on the webpage as its food? This game here allows you to control the greedy snake and swallow as many words/ images as you can!
+Have you ever imagined a greedy snake game that eats HTML elements on webpage as food? This game here allows you to control the greedy snake and swallow as many words/ images as you can!
 
 
 ### How it works:
@@ -104,7 +105,7 @@ Yuhang:
 
 - Problem 1: the original way to find words list would break the link and change the style.
 
-  Solution: borrow Leon's in-class code, advanced replacer extension, involving regular expression. (cr: James Padolsey, [findAndReplaceDOMText](https://github.com/padolsey/findAndReplaceDOMText)
+  Solution: borrow Leon's in-class code, advanced replacer extension, involving regular expression. (cr: James Padolsey, [findAndReplaceDOMText](https://github.com/padolsey/findAndReplaceDOMText) )
 
   Now it only selects the word on the page.
   ```javascript  
